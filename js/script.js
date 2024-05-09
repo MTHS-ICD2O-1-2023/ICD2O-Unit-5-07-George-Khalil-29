@@ -8,12 +8,13 @@ function calculateSum() {
   const n = parseInt(document.getElementById("numberInput").value)
 
   if (!isNaN(n) && n > 0) {
-    const sum = (n / 2) * (n + 1)
+    let sum = 0
 
     // Using a for loop to add up numbers from 1 to the entered integer
     for (let i = 1; i <= n; i++) {
       sum += i
     }
+
     document.getElementById("result").innerHTML =
       "The sum of numbers from 1 to " + n + " is " + sum + "."
   } else {
